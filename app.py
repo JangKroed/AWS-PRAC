@@ -13,7 +13,7 @@ def file_upload():
     s3 = boto3.client('s3')
     s3.put_object(
         ACL="public-read",
-        Bucket="{greatgreat}",
+        Bucket="greatgreat",
         Body=file,
         Key=file.filename,
         ContentType=file.content_type)
